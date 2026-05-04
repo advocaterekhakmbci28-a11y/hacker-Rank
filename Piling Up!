@@ -1,0 +1,8 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+for _ in range(int(input())):
+    n = int(input())
+    blocks = list(map(int,input().split()))
+    if max(blocks) == blocks[0] or max(blocks)==blocks[n-1]:
+        print("Yes")
+    else :
+        print("No")
