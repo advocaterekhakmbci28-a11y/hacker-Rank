@@ -1,0 +1,15 @@
+# Complete the solve function below.
+def solve(s):
+    import string
+
+def solve(s):
+    # Split by whitespace to handle multiple spaces correctly
+    words = s.split(' ')
+    # Capitalize the first letter of each word and join back
+    capitalized_words = [word.capitalize() if word else '' for word in words]
+    return ' '.join(capitalized_words)
+
+# Example Usage
+print(solve("chris alan"))    # Output: Chris Alan
+print(solve("12abc hello"))  # Output: 12abc Hello
+
