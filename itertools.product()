@@ -1,0 +1,15 @@
+from itertools import product
+
+# Read space-separated elements for list A and convert to integers
+A = list(map(int, input().split()))
+
+# Read space-separated elements for list B and convert to integers
+B = list(map(int, input().split()))
+
+# Compute the Cartesian product of A and B
+# Since A and B are already sorted, product(A, B) will yield tuples in sorted order
+result = product(A, B)
+
+# Print the tuples separated by space
+# Using the * operator (unpacking) with print() automatically adds space between items
+print(*result)
