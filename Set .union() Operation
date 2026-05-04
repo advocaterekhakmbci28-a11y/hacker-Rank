@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read input
+n = int(input())
+english_subscribers = set(map(int, input().split()))
+m = int(input())
+french_subscribers = set(map(int, input().split()))
+
+# Calculate the union of both sets
+total_subscribers = english_subscribers.union(french_subscribers)
+
+# Output the count
+print(len(total_subscribers))
