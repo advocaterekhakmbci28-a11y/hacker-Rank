@@ -1,0 +1,26 @@
+import re
+import email.utils
+
+def validate_emails():
+    try:
+        n = int(input())
+    except EOFError:
+        return
+
+    for _ in range(n):
+        line = input()
+        # Parse "Name <user@domain.ext>"
+        parsed_name, parsed_email = email.utils.parseaddr(line)
+        
+        # Regex to validate:
+        # ^[a-zA-Z] : Username starts with alpha
+        # [\w.-]+ : Followed by alphanumeric, ., _, -
+        # @[a-zA-Z]+ : Domain (only alpha)
+        # \.[a-zA-Z]{1,3}$ : Dot + Ext (1-3 alpha)
+        pattern = r"^[a-zA-Z][\w.-]+@[a-zA-Z]+\.[a-zA-Z]{1,3}$"
+        
+        if re.match(pattern, parsed_email):
+            print(email.utils.formataddr((parsed_name, parsed_email)))
+
+if __name__ == '__main__':
+    validate_emails()
