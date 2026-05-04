@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read input
+k = int(input())
+room_numbers = list(map(int, input().split()))
+
+# Utilize set and sum to find the unique room
+# (Sum of all unique rooms * k) - (Sum of all rooms) = (k-1) * Captain's Room
+captain_room = (sum(set(room_numbers)) * k - sum(room_numbers)) // (k - 1)
+
+print(captain_room)
