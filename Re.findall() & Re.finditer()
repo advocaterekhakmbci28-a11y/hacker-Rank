@@ -1,0 +1,23 @@
+import re
+
+# Define the vowels and consonants as specified
+vowels = 'aeiou'
+consonants = 'qwrtypsdfghjklzxcvbnm'
+
+# The regex pattern:
+# 1. (?<=[qwrty...]) -> Positive Lookbehind: ensures preceding char is a consonant
+# 2. ([aeiou]{2,})   -> Capturing Group: finds 2 or more vowels
+# 3. (?=[qwrty...])  -> Positive Lookahead: ensures following char is a consonant
+pattern = r'(?<=[%s])([%s]{2,})(?=[%s])' % (consonants, vowels, consonants)
+
+# Find all matches in the input string (case-insensitive)
+# Using re.IGNORECASE (re.I) handles uppercase vowels and consonants
+s = input().strip()
+matches = re.findall(pattern, s, flags=re.I)
+
+# Output results
+if matches:
+    for match in matches:
+        print(match)
+else:
+    print("-1")
