@@ -1,0 +1,5 @@
+def arrays(arr):
+    n=numpy.array(list(reversed(arr)),float)
+    return n
+
+
