@@ -1,0 +1,7 @@
+def print_full_name(first, last):
+    # Using f-string for formatting (Python 3.6+)
+
+# Example usage:
+# print_full_name("Ross", "Taylor")
+# Output: Hello Ross Taylor! You just delved into python.def print_full_name(first, last):
+    print(f"Hello {first} {last}! You just delved into python.")
