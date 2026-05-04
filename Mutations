@@ -1,0 +1,9 @@
+def mutate_string(string, position, character):
+    # Convert the string to a list of characters
+    l = list(string)
+    # Change the character at the specified position
+    l[position] = character
+    # Join the list back into a single string
+    mutated_string = ''.join(l)
+    return mutated_string
+
