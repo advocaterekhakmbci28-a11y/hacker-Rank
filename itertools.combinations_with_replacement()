@@ -1,0 +1,9 @@
+from itertools import combinations_with_replacement
+
+# Read input string and integer
+s, n = input().split()
+
+# Sort the string and find combinations with replacement
+# sorted(s) ensures alphabetical order
+for c in combinations_with_replacement(sorted(s), int(n)):
+    print(''.join(c))
