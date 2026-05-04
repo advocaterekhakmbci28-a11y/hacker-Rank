@@ -1,0 +1,17 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read input
+n = int(input())
+A = set(map(int, input().split()))
+num_operations = int(input())
+
+# Perform each operation on set A
+for _ in range(num_operations):
+    command = input().split()
+    operation = command[0]
+    other_set = set(map(int, input().split()))
+    
+    # Dynamically call the operation on set A
+    getattr(A, operation)(other_set)
+
+# Output the sum of elements in set A
+print(sum(A))
