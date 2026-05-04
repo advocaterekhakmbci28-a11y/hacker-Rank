@@ -1,0 +1,10 @@
+# Read input values a, b, and m as integers
+a = int(input())
+b = int(input())
+m = int(input())
+
+# Calculate and print a**b
+print(pow(a, b))
+
+# Calculate and print (a**b) % m
+print(pow(a, b, m))
