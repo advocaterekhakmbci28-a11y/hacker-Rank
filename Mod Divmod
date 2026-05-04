@@ -1,0 +1,14 @@
+# Read input values
+a = int(input())
+b = int(input())
+
+# Perform calculations and print results
+
+# Integer division (a // b)
+print(a // b)
+
+# Modulo operator (a % b)
+print(a % b)
+
+# divmod function (divmod(a, b))
+print(divmod(a, b))
