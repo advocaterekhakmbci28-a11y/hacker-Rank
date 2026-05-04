@@ -1,0 +1,10 @@
+import sys
+from collections import Counter, OrderedDict
+class OrderedCounter(Counter, OrderedDict):
+    pass
+input = sys.stdin.read().splitlines()
+n = int(input[0])
+words = input[1:]
+word_counts = OrderedCounter(words)
+print(len(word_counts))
+print(*(word_counts.values()))
