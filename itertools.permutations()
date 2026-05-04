@@ -1,0 +1,9 @@
+from itertools import permutations
+
+# Read input
+s, k = input().split()
+
+# Generate, sort, and print permutations
+# Sorted() handles lexicographical order if input string is sorted
+for p in sorted(list(permutations(s, int(k)))):
+    print(''.join(p))
