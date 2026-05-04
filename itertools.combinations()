@@ -1,0 +1,14 @@
+from itertools import combinations
+
+# Read input and split into string S and integer K
+S, K = input().split()
+
+# Sort the string S to ensure combinations are emitted in lexicographical order
+sorted_S = sorted(S)
+
+# Loop through each size from 1 to K (inclusive)
+for i in range(1, int(K) + 1):
+    # Generate combinations of size i
+    for combo in combinations(sorted_S, i):
+        # Join the tuple into a string and print
+        print("".join(combo))
