@@ -1,0 +1,15 @@
+import re
+
+# Read input string S
+S = input().strip()
+
+# Pattern explanation:
+# ([a-zA-Z0-9]) -> Capture group 1: any single alphanumeric character
+# \1           -> Backreference: matches the exact same character as the first group
+m = re.search(r'([a-zA-Z0-9])\1', S)
+
+# Output the result
+if m:
+    print(m.group(1))
+else:
+    print("-1")
