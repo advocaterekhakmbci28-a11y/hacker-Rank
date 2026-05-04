@@ -1,0 +1,12 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read input
+n_eng = int(input())
+eng_subs = set(map(int, input().split()))
+n_fre = int(input())
+fre_subs = set(map(int, input().split()))
+
+# Calculate only English subscriptions (English - French)
+only_eng = eng_subs.difference(fre_subs)
+
+# Output the result
+print(len(only_eng))
