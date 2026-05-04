@@ -1,0 +1,12 @@
+# Read input values for a, b, c, and d
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+
+# Calculate a**b and c**d, then add the results
+# Python automatically handles the large integer sizes
+result = (a ** b) + (c ** d)
+
+# Print the final result
+print(result)
