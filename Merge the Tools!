@@ -1,0 +1,16 @@
+def merge_the_tools(string, k):
+    # your code goes here
+    
+    # Iterate over the string in steps of k
+    for i in range(0, len(string), k):
+        # Extract the substring of length k
+        t_i = string[i:i+k]
+        
+        # Create a unique string keeping order
+        u_i = ""
+        seen = set()
+        for char in t_i:
+            if char not in seen:
+                u_i += char
+                seen.add(char)
+        
