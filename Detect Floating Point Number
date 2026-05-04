@@ -1,0 +1,29 @@
+import re
+
+def is_valid_float():
+    # Read the number of test cases
+    try:
+        t = int(input().strip())
+    except EOFError:
+        return
+
+    for _ in range(t):
+        s = input().strip()
+        
+        try:
+            # 1. Must be able to convert to float (handles signs and digits)
+            float_val = float(s)
+            
+            # 2. Must contain exactly one '.'
+            # 3. Must not be an integer-only string (e.g., '5')
+            if '.' in s:
+                print(True)
+            else:
+                print(False)
+                
+        except ValueError:
+            # Handles cases like 'SomeRandomStuff' or '4.0O0'
+            print(False)
+
+if __name__ == "__main__":
+    is_valid_float()
