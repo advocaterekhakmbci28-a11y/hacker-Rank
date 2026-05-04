@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read input for set a
+m = int(input())
+set_a = set(map(int, input().split()))
+
+# Read input for set b
+n = int(input())
+set_b = set(map(int, input().split()))
+
+# Calculate symmetric difference
+# Elements in either set, but not both (a - b) U (b - a)
+sym_diff = set_a.symmetric_difference(set_b)
+
+# Print result sorted in ascending order
+for num in sorted(sym_diff):
+    print(num)
